@@ -3,6 +3,9 @@
 //Electronのモジュール
 const electron = require("electron");
 
+// var tray = require("tray");
+// var appIcon = new Tray(__dirname + '/images/icon.jpg');
+
 // アプリケーションをコントロールするモジュール
 const app = electron.app;
 
@@ -21,7 +24,12 @@ app.on('window-all-closed', function(){
 
 // Electronの初期化完了後に実行
 app.on('ready', function(){
-    mainWindow = new BrowserWindow({width: 800, height: 600});
+    mainWindow = new BrowserWindow({
+        'width': 300, 
+        'height': 300,
+        'transparent': false,
+        'frame': false
+    });
     mainWindow.loadURL('file://' + __dirname + '/index.html');
 
     // ウィンドウが閉じられたらアプリも終了

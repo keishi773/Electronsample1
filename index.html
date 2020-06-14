@@ -3,8 +3,30 @@
     <head>
         <meta charset="UTF-8">
         <title>Sample</title>
+        <style>
+            body{
+                /* ドラッグ可能にする */
+                -webkit-app-region: drag;
+                /* ドラッグはテキスト選択と競合するで禁止  */
+                -webkit-user-select: none;
+                background-color:#489dcf;
+                text-align: center;
+            }
+            p{
+                text-align: center;
+            }
+            .button{
+                width: 100px;
+                height: 100px;
+                border-radius: 50px;
+                background: #55b9f3;
+                box-shadow:  21px 21px 41px #489dcf, 
+                -21px -21px 41px #62d5ff;
+            }
+        </style>
     </head>
     <body>
         <p>Hello yeah!!!!</p>
+        <button type="submit" class="button">ぷにぷにしたボタン</button>
     </body>
 </html>
